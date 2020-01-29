@@ -1,2 +1,2 @@
-#define SECRET_SSID "asteria"
-#define SECRET_PASS "asteria1234"
+#define SECRET_SSID "umbra"
+#define SECRET_PASS "umbraexperience20"

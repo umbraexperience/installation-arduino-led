@@ -36,6 +36,8 @@ int currentTime;
 
 uint8_t v = 50;
 
+uint8_t espaiat = 200;
+
 void setup() {
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
@@ -73,8 +75,8 @@ void setup() {
   Serial.println("\nStarting connection to server...");
   // if you get a connection, report back via serial:
   Udp.begin(localPort);
-      analogWrite(DATA , 10);
-    v = 10;
+  analogWrite(DATA , 10);
+  v = 10;
 }
 
 void loop() {
@@ -107,8 +109,11 @@ void loop() {
   if (action) {
     if (v < 255) {
       v++;
+      espaiat--;
       analogWrite(DATA , v);
-      delay(10);
+      delay(espaiat);
+      analogWrite(DATA , 0);
+      delay(espaiat);
     }
 
   } else {

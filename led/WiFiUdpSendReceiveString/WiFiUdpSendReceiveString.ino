@@ -14,7 +14,7 @@
 #include <SPI.h>
 #include <WiFiNINA.h>
 #include <WiFiUdp.h>
-#define DATA 3
+#define DATA 5
 
 
 int status = WL_IDLE_STATUS;

@@ -1,4 +1,4 @@
-#define DATA 3
+#define DATA 5
 
 
 void setup() {
@@ -10,12 +10,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i = 0; i < 255; i++) {
-    delay(10);
-    analogWrite(DATA , i);
-  }
-  for (int i = 255; i > 0; i--) {
-    delay(10);
-    analogWrite(DATA , i);
-  }
+
+    analogWrite(DATA , 1);
+
+  
 }

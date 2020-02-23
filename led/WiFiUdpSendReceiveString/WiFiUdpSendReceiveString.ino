@@ -34,9 +34,9 @@ WiFiUDP Udp;
 boolean action = false;
 int currentTime;
 
-uint8_t v = 1;
+uint8_t v = 0;
 
-uint8_t espaiat = 200;
+uint8_t espaiat = 170;
 
 void setup() {
   //Initialize serial and wait for port to open:
@@ -72,7 +72,7 @@ void setup() {
   // if you get a connection, report back via serial:
   Udp.begin(localPort);
 
-  v = 1;
+  v = 0;
   analogWrite(DATA , v);
 }
 
@@ -123,10 +123,13 @@ void loop() {
     }
 
   } else {
-    if (v > 10) {
+    if (v > 0) {
       v--;
       analogWrite(DATA , v);
       delay(10);
+    } else {
+      v = 0;
+      espaiat = 170;
     }
 
   }
